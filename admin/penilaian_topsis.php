@@ -66,7 +66,7 @@ include "../koneksi.php";
 						echo "<td> $row->jumlah </td>";
 						echo "<td> $row->keterangan </td>";
 					echo "</tr>";
-					$awal = $akhir;
+					$awal = $akhir+1;
 					$akhir+=20;
 				}
 			} else {

@@ -77,7 +77,10 @@ $jml_kriteria = count($kriteria);
 </div>
 
 <br />
+<a href="#hasil_terpilih">Lihat Hasil Terpilih</a>
 <br />
+<br />
+
 
 	<table border='1'>
 		<caption>Evaluation Matrix (x<sub>ij</sub>)</caption>
@@ -290,7 +293,7 @@ $jml_kriteria = count($kriteria);
             			if(!isset($dplus[$i-1])) $dplus[$i-1]=0;
             				$dplus[$i-1]+=pow($yplus[$k]-$y[$k][$i-1],2);
           			}
-          			echo "<td>".round(sqrt($dplus[$i-1]),6)."</td>
+          			echo "<td>".round(sqrt($dplus[$i-1]),4)."</td>
            				</tr>\n";
         		}
         	?>
@@ -321,7 +324,7 @@ $jml_kriteria = count($kriteria);
             			if(!isset($dmin[$i-1]))$dmin[$i-1]=0;
             				$dmin[$i-1]+=pow($ymin[$k]-$y[$k][$i-1],2);
           			}
-          			echo "<td>".round(sqrt($dmin[$i-1]),6)."</td>
+          			echo "<td>".round(sqrt($dmin[$i-1]),4)."</td>
            				</tr>\n";
         		}
         	?>
@@ -350,7 +353,7 @@ $jml_kriteria = count($kriteria);
             			<th>A{$i}</th>
             			<td>{$nama}</td>";
           			foreach($kriteria as $k){  
-            			$V[$i-1]=$dmin[$i-1]/($dmin[$i-1]+$dplus[$i-1]);
+            			$V[$i-1]=round($dmin[$i-1]/($dmin[$i-1]+$dplus[$i-1]),4);
           			}
           			echo "<td>{$V[$i-1]}</td></tr>\n";
 					if($terpilih<$V[$i-1]) {
@@ -362,7 +365,7 @@ $jml_kriteria = count($kriteria);
         	?>
       	</tbody>
     </table>
-	<p>Guru terbaik yang terpilih adalah <b><?php echo "$nama_terpilih $A_terpilih"; ?></b> 
+	<p id="hasil_terpilih">Guru terbaik yang terpilih adalah <b><?php echo "$nama_terpilih $A_terpilih"; ?></b> 
 		dengan nilai preferensi <b><?php echo $terpilih; ?></b>.</p>
 </center>
 </body>
@@ -371,5 +374,6 @@ $jml_kriteria = count($kriteria);
 <?php
 
 $connect->close();
+$result->close();
 
 ?>
