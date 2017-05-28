@@ -1,0 +1,124 @@
+body {
+	padding: 0px;
+	margin: 0px;
+}
+
+.wrap{
+	background: #80b3ff;
+	width: 100%;
+	margin: 0px;
+}
+
+/*bagian header*/
+.wrap .header{
+	background: white;
+	height: 150px;
+	padding: 2px 10px;
+	background: url(images/header.png);
+}
+
+.wrap .header h1 {
+	margin: 35px 0px 5px 0px;
+	padding-left: 200px;
+}
+
+.wrap .header h3, p {
+	margin: 0px;
+	padding: 0px 0px 10px 200px;
+}
+
+/*akhir header*/
+
+/*bagian menu*/
+.wrap .menu{
+	background: #0066ff;
+}
+
+.wrap .menu ul{
+	padding: 0;
+	margin: 0;
+	background: #0066ff;
+	overflow: hidden;
+}
+
+.wrap .menu ul li{
+	float: right;
+	list-style-type: none;
+	padding: 10px 0px;
+}
+
+.wrap .menu ul li a {
+	text-decoration: none;
+	padding: 20px;
+	color: white;
+}
+
+.wrap .menu ul li a:hover {
+	background-color: #000080;
+	color: white;
+	padding: 20px;
+}
+/*akhir menu*/
+
+.clear{
+	clear: both;
+}
+
+.badan{
+	height: 450px;
+	padding: 10px 70px;
+}
+/*bagian sidebar*/
+.wrap .badan .sidebar{
+	background: #0066ff;
+	float: left;	
+	width: 20%;
+	height: 70%;
+	margin-left: 20px;
+}
+
+.wrap .badan .sidebar ul {
+	margin: 0px;
+	padding: 20px 0px;
+}
+
+.wrap .badan .sidebar ul li:first-child {
+	border-top: 2px solid white;
+}
+
+.wrap .badan .sidebar ul li {
+	list-style-type: none;
+	padding: 10px 0px 10px 10px;
+	border-bottom: 2px solid white;
+}
+
+.wrap .badan .sidebar ul li:hover {
+	background-color: #000080;
+	color: white;
+}
+
+.wrap .badan .sidebar ul li a {
+	text-decoration: none;
+	color: white;
+}
+
+.wrap .badan .sidebar ul li a:hover {
+	color: white;
+}
+
+/*akhir sidebar*/
+
+.wrap .badan .content{
+	background: white;
+	float: left;
+	height: auto;
+	width: 80%;
+}
+
+.wrap .footer{
+	background-color: #0066ff;
+	text-align: center;
+	width: 100%;
+	padding: 10px 0px;
+	margin: 0px;
+}

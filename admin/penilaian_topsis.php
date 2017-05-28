@@ -120,7 +120,7 @@ include "../koneksi.php";
 											echo "<input type='hidden' name='nip[]' value='".$row->nip."' />";
 											echo "<input type='hidden' name='kode_nilai_guru[]' value='".$row->nip.$row_kriteria->kode_kriteria."' />";
 											echo "<input type='hidden' name='kode_kriteria[]' value='".$row_kriteria->kode_kriteria."' />";
-											echo "<td style='text-align:center;'><input type='text' name='nilai_bobot[]' placeholder='1 s/d 100' size='10' maxlength='3' required='true' /></td>";
+											echo "<td style='text-align:center;'><input type='text' name='angka_penilaian[]' placeholder='1 s/d 100' size='10' maxlength='3' required='true' /></td>";
 										}
 									}
 								}
